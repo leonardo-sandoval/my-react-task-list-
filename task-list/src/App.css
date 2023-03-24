@@ -1,0 +1,21 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--rojo: #ba181b;
+	--azul: #00b4d8;
+	--azul-hover: #48cae4;
+	--rojo-hover: #e5383b;
+	--verde: #09a129;
+}
+
+body {
+	font-family: Poppins;
+	max-width: 1200px;
+	margin: 40px auto;
+	display: flex;
+	justify-content: center;
+}
