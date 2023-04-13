@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './App.css';
 import { TodoAdd } from './components/TodoAdd';
 import { TodoList } from './components/TodoList';
@@ -32,7 +31,7 @@ function App() {
 					<h3>Agregar Tarea</h3>
 					<TodoAdd handleNewTodo={handleNewTodo} />
 				</div>
-
+	
 				<TodoList
 					todos={todos}
 					handleUpdateTodo={handleUpdateTodo}

@@ -29,7 +29,7 @@ export const TodoAdd = ({ handleNewTodo }) => {
 				name='description'
 				value={description}
 				onChange={onInputChange}
-				placeholder='¿Qué hay que hacer y  porque tan poquito?'
+				placeholder='¿Digita la actividad?'
 			/>
 
 			<button className='btn-add' type='submit'>
