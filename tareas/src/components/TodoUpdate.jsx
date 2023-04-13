@@ -33,7 +33,7 @@ export const TodoUpdate = ({ todo, handleUpdateTodo }) => {
 				name='updateDescription'
 				value={updateDescription}
 				onChange={onInputChange}
-				placeholder='¿Qué hay que hacer?'
+				placeholder='¿Vacio?'
 				readOnly={disabled}
 				ref={focusInputRef}
 			/>

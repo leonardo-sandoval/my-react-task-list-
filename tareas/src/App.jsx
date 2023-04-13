@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
 import './App.css';
 import { TodoAdd } from './components/TodoAdd';
 import { TodoList } from './components/TodoList';
@@ -40,6 +40,7 @@ function App() {
 					handleCompleteTodo={handleCompleteTodo}
 				/>
 			</div>
+			
 		</>
 	);
 }
