@@ -50,12 +50,13 @@ export const useTodo = () => {
 		dispatch(action);
 	};
 
-	const handleUpdateTodo = (id, description) => {
+	const handleUpdateTodo = (id, description,titulo) => {
 		const action = {
 			type: 'Update Todo',
 			payload: {
 				id,
 				description,
+				titulo,
 			},
 		};
 

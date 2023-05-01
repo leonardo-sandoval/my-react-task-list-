@@ -5,11 +5,13 @@ export const useForm = (initialForm = {}) => {
 
 	const onInputChange = e => {
 		const name = e.target.name;
+		const titulo =e.target.titulo;
 		const value = e.target.value;
 
 		setFormState({
 			...formState,
 			[name]: value,
+			[titulo]:value,
 		});
 	};
 

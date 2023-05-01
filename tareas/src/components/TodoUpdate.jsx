@@ -3,8 +3,8 @@ import { FaEdit } from 'react-icons/fa';
 import { useForm } from '../hooks/useForm';
 
 export const TodoUpdate = ({ todo, handleUpdateTodo }) => {
-	const { updateDescription, onInputChange } = useForm({
-		updateDescription: todo.description,
+	const { updateDescription,updatetitulo, onInputChange } = useForm({
+		updateDescription: todo.description,updatetitulo:todo.titulo,
 	});
 
 	const [disabled, setDisabled] = useState(true);
@@ -15,8 +15,9 @@ export const TodoUpdate = ({ todo, handleUpdateTodo }) => {
 
 		const id = todo.id;
 		const description = updateDescription;
+		const titulo= updatetitulo;
 
-		handleUpdateTodo(id, description);
+		handleUpdateTodo(id, description,titulo);
 
 		setDisabled(!disabled);
 
@@ -37,7 +38,18 @@ export const TodoUpdate = ({ todo, handleUpdateTodo }) => {
 				readOnly={disabled}
 				ref={focusInputRef}
 			/>
-
+<input
+				type='text'
+				className={`input-update ${
+					todo.done ? 'text-decoration-dashed' : ''
+				}`}
+				name='updatetitulo'
+				value={updatetitulo}
+				onChange={onInputChange}
+				placeholder='¿Vacio?'
+				readOnly={disabled}
+				ref={focusInputRef}
+			/>
 			<button className='btn-edit' type='submit'>
 				<FaEdit />
 			</button>
