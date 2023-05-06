@@ -33,7 +33,11 @@ export const TodoUpdate = ({ todo, handleUpdateTodo }) => {
 				name='updateDescription'
 				value={updateDescription}
 				onChange={onInputChange}
+<<<<<<< HEAD
 				placeholder='¿Escribe la actividad?'
+=======
+				placeholder='¿Vacio?'
+>>>>>>> c77cb89 (Custom Hooks - 2)
 				readOnly={disabled}
 				ref={focusInputRef}
 			/>

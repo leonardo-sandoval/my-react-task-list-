@@ -29,7 +29,11 @@ export const TodoAdd = ({ handleNewTodo }) => {
 				name='description'
 				value={description}
 				onChange={onInputChange}
+<<<<<<< HEAD
 				placeholder='¿Digita la actividad?'
+=======
+				placeholder='¿Escribe tu nueva tarea(Actividad)?'
+>>>>>>> c77cb89 (Custom Hooks - 2)
 			/>
 
 			<button className='btn-add' type='submit'>
