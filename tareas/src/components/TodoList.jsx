@@ -8,7 +8,7 @@ export const TodoList = ({
 	handleCompleteTodo,
 }) => {
 	return (
-		<ul>
+		<ul className='ul'>
 			{todos.map(todo => (
 				<TodoItem
 					key={todo.id}

@@ -1,52 +1,22 @@
-import { useEffect } from 'react';
-import './App.css';
-import { TodoAdd } from './components/TodoAdd';
-import { TodoList } from './components/TodoList';
-import { useTodo } from './hooks/useTodo';
 
-function App() {
-	const {
-		todos,
-		todosCount,
-		pendingTodosCount,
-		handleNewTodo,
-		handleDeleteTodo,
-		handleCompleteTodo,
-		handleUpdateTodo,
-	} = useTodo();
+import React from 'react'
+import { BrowserRouter,Route ,Routes} from 'react-router-dom';
+import HomePage from './pages/Home';
+import NosotrosPage from './pages/SobreNosotros';
+import Tareapage from './pages/Tareas'
+import Notfound from './pages/notfound';
 
-	return (
-		<>
-
-			<div className='card-to-do'>
-				<header>
-					<h1>Lista de tareas</h1>
-				</header>
-				
-				<div className='counter-todos'>
-					<h3>
-						N° Tareas: <span>{todosCount}</span>
-					</h3>
-					<h3>
-						Pendientes: <span>{pendingTodosCount}</span>
-					</h3>
-				</div>
-
-				<div className='add-todo'>
-					<h3>Agregar Tarea</h3>
-					<TodoAdd handleNewTodo={handleNewTodo} />
-				</div>
-
-				<TodoList
-					todos={todos}
-					handleUpdateTodo={handleUpdateTodo}
-					handleDeleteTodo={handleDeleteTodo}
-					handleCompleteTodo={handleCompleteTodo}
-				/>
-			</div>
-			
-		</>
-	);
+import Navbar from './assets/menu'
+export default function  App(){
+  return(
+    <BrowserRouter>
+    <Navbar/>
+    <Routes>
+    <Route path='/*'element={<Notfound/>}/>
+    <Route path='/'element={<HomePage/>}/>
+    <Route path='/tareas'element={<Tareapage/>}/>
+    <Route path='/SobreNosotros'element={<NosotrosPage/> }/>
+    </Routes>
+    </BrowserRouter>
+  )
 }
-
-export default App;

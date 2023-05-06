@@ -31,18 +31,6 @@ export const TodoUpdate = ({ todo, handleUpdateTodo }) => {
 				className={`input-update ${
 					todo.done ? 'text-decoration-dashed' : ''
 				}`}
-				name='updateDescription'
-				value={updateDescription}
-				onChange={onInputChange}
-				placeholder='¿Vacio?'
-				readOnly={disabled}
-				ref={focusInputRef}
-			/>
-<input
-				type='text'
-				className={`input-update ${
-					todo.done ? 'text-decoration-dashed' : ''
-				}`}
 				name='updatetitulo'
 				value={updatetitulo}
 				onChange={onInputChange}
@@ -50,6 +38,19 @@ export const TodoUpdate = ({ todo, handleUpdateTodo }) => {
 				readOnly={disabled}
 				ref={focusInputRef}
 			/>
+			<input
+				type='text'
+				className={`input-update ${
+					todo.done ? 'text-decoration-dashed' : ''
+				}`}
+				name='updateDescription'
+				value={updateDescription}
+				onChange={onInputChange}
+				placeholder='¿Vacio?'
+				readOnly={disabled}
+				ref={focusInputRef}
+			/>
+
 			<button className='btn-edit' type='submit'>
 				<FaEdit />
 			</button>

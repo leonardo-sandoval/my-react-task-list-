@@ -9,7 +9,7 @@ export const TodoItem = ({
 	handleCompleteTodo,
 }) => {
 	return (
-		<li>
+		<li className='li'>
 			<span onClick={() => handleCompleteTodo(todo.id)}>
 				<label
 					className={`container-done ${todo.done ? 'active' : ''}`}

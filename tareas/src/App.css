@@ -1,26 +1,3 @@
-:root {
-	--rojo: #c5181bd3;
-	--azul: #00b4d8;
-	--azul-hover: #48cae4;
-	--rojo-hover: #df090d;
-	--verde: #09a129;
-}
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-
-
-body {
-	font-family: Arial, Helvetica, sans-serif;
-	background-color: #0a5e6e;
-	max-width: 1200px;
-	margin: 40px auto;
-	display: flex;
-	justify-content: center;
-}
 
 .card-to-do {
 	box-shadow: 0px 0px 5px rgba(6, 1, 20, 0.979);
@@ -28,11 +5,11 @@ body {
 	background-color: #fffffff3;
 	border-radius: 40px;
 	width: 700px;
-	
+	justify-content: center;
 	
 }
 
-header {
+.heade {
 	text-align: center;
 	
 }
@@ -54,14 +31,14 @@ header {
 	margin-left: 10px;
 }
 
-ul {
+.ul {
 	margin-top: 50px;
 	display: flex;
 	flex-direction: column;
 	gap: 15px;
 }
 
-ul li {
+.ul .li {
 	list-style: none;
 	display: flex;
 	justify-content: space-between;
@@ -69,14 +46,14 @@ ul li {
 	gap: 20px;
 }
 
-ul li span {
+.ul .li span {
 	overflow: hidden;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
 }
 
-ul li form {
+.ul .li form {
 	flex: 1;
 	display: flex;
 	justify-content: space-between;
@@ -100,12 +77,12 @@ ul li form {
 	width: 24px;
 	height: 24px;
 	border-radius: 20px;
-	border: 2px solid var(--verde);
+	border: 2px solid green;
 	cursor: pointer;
 }
 
 .container-done.active {
-	background-color: var(--verde);
+	background-color: green;
 	
 }
 
@@ -115,7 +92,7 @@ ul li form {
 }
 
 .btn-delete {
-	background-color: var(--rojo);
+	background-color: red;
 	color: #fff;
 	padding: 15px;
 	display: flex;
@@ -129,11 +106,11 @@ ul li form {
 }
 
 .btn-delete:hover {
-	background-color: var(--rojo-hover);
+	background-color: rgb(184, 8, 8);
 }
 
 .btn-edit {
-	background-color: var(--azul);
+	background-color: blue;
 	color: #fff;
 	padding: 15px;
 	display: flex;
@@ -147,7 +124,7 @@ ul li form {
 }
 
 .btn-edit:hover {
-	background-color: var(--azul-hover);
+	background-color: rgb(45, 45, 172);
 }
 
 form {
@@ -187,7 +164,7 @@ form {
 
 .btn-add {
 	border: none;
-	background-color: var(--azul);
+	background-color: blue;
 	color: #fff;
 	padding: 5px 4px;
 	border-radius: 10px;
@@ -197,5 +174,5 @@ form {
 }
 
 .btn-add:hover {
-	background-color: var(--azul-hover);
+	background-color:  rgb(45, 45, 172);
 }
